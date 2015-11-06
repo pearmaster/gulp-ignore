@@ -1,22 +1,22 @@
 {
   "name": "gulp-ignore",
   "description": "Include or exclude gulp files from the stream based on a condition",
-  "version": "2.0.1",
-  "homepage": "https://github.com/robrich/gulp-ignore",
-  "repository": "git://github.com/robrich/gulp-ignore.git",
-  "author": "Rob Richardson (http://robrich.org/)",
+  "version": "2.0.2",
+  "homepage": "https://github.com/pearmaster/gulp-ignore",
+  "repository": "git://github.com/pearmaster/gulp-ignore.git",
+  "author": "Jacob Brunson",
   "main": "./index.js",
   "keywords": [
     "gulpplugin",
     "filter",
-    "minimatch",
+    "match",
     "include",
     "exclude",
     "gulp-filter"
   ],
   "dependencies": {
     "through2": "^2.0.0",
-    "gulp-match": "^1.0.0"
+    "match-like-gulp": "^0.0.1"
   },
   "devDependencies": {
     "jshint": "^2.8.0",
