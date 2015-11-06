@@ -1,20 +1,20 @@
 "use strict";
 
 var through = require('through2');
-var gulpmatch = require('gulp-match');
+var match = require('match-like-gulp');
 
-var include = function(condition, minimatchOptions){
+var include = function(condition){
 	return through.obj(function (file, enc, callback) {
-		if (gulpmatch(file, condition, minimatchOptions)) {
+		if (match(file, condition)) {
 			this.push(file);
 		}
 		return callback();
 	});
 };
 
-var exclude = function(condition, minimatchOptions){
+var exclude = function(condition){
 	return through.obj(function (file, enc, callback) {
-		if (!gulpmatch(file, condition, minimatchOptions)) {
+		if (!match(file, condition)) {
 			this.push(file);
 		}
 		return callback();
