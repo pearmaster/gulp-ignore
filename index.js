@@ -5,7 +5,7 @@ var match = require('match-like-gulp');
 
 var include = function(condition){
 	return through.obj(function (file, enc, callback) {
-		if (match(file, condition)) {
+		if (match(file.path, condition)) {
 			this.push(file);
 		}
 		return callback();
@@ -14,7 +14,7 @@ var include = function(condition){
 
 var exclude = function(condition){
 	return through.obj(function (file, enc, callback) {
-		if (!match(file, condition)) {
+		if (!match(file.path, condition)) {
 			this.push(file);
 		}
 		return callback();
